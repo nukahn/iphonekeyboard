@@ -1,0 +1,97 @@
+name: RemoteKeyboard
+options:
+  bundleIdPrefix: com.remotekeyboard
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+
+  # ─── 메인 앱 (iPhone + iPad 유니버셜) ───────────────────────────────────────
+  RemoteKeyboard:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: RemoteKeyboard
+        excludes:
+          - "**/*.entitlements"
+          - "**/*.plist"
+      - path: SharedKit/Sources
+    resources:
+      - RemoteKeyboard/Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.remotekeyboard.app
+        TARGETED_DEVICE_FAMILY: "1,2"
+        INFOPLIST_FILE: RemoteKeyboard/Info.plist
+        CODE_SIGN_ENTITLEMENTS: RemoteKeyboard/RemoteKeyboard.entitlements
+    info:
+      path: RemoteKeyboard/Info.plist
+      properties:
+        CFBundleDisplayName: RemoteKeyboard
+        NSLocalNetworkUsageDescription: "RemoteKeyboard는 iPhone과 iPad를 연결하기 위해 로컬 네트워크를 사용합니다."
+        NSBonjourServices:
+          - _remotekb._tcp
+          - _remotekb._udp
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    entitlements:
+      path: RemoteKeyboard/RemoteKeyboard.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.remotekeyboard
+    dependencies:
+      - target: RemoteKeyboardExtension
+        embed: true
+
+  # ─── 키보드 익스텐션 ─────────────────────────────────────────────────────────
+  RemoteKeyboardExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: RemoteKeyboardExtension
+        excludes:
+          - "**/*.entitlements"
+          - "**/*.plist"
+      - path: SharedKit/Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.remotekeyboard.app.keyboard
+        TARGETED_DEVICE_FAMILY: "1,2"
+        INFOPLIST_FILE: RemoteKeyboardExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: RemoteKeyboardExtension/RemoteKeyboardExtension.entitlements
+    info:
+      path: RemoteKeyboardExtension/Info.plist
+      properties:
+        CFBundleDisplayName: RemoteKeyboard
+        NSExtension:
+          NSExtensionAttributes:
+            IsASCIICapable: false
+            PrefixesBeforeExistingWord: false
+            PrimaryLanguage: en-US
+            RequestsOpenAccess: true
+          NSExtensionPointIdentifier: com.apple.keyboard-service
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).KeyboardViewController
+    entitlements:
+      path: RemoteKeyboardExtension/RemoteKeyboardExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.remotekeyboard

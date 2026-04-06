@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05D6D7601D7CC5D1E50108FE /* RemoteKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0670D791278453A5D093B109 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */; };
+		11FBB79CB9E2078DDA0027FE /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */; };
+		2FFC82C9C3582402715BA5F4 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */; };
+		31B9E4349DD7A042BB6B7B9D /* IPadReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C367F669051E8298365F /* IPadReceiverView.swift */; };
+		33B8DB28608E1384C2F74331 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77E68CCD1625627EF64F6E /* SharedConstants.swift */; };
+		61E06BB5476DD20968F71F09 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */; };
+		690D8F5627D3CA0111F63FBE /* RemoteKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFFD06342C2B2B0E7ED867 /* RemoteKeyboardApp.swift */; };
+		9207883ACF9939496BBF8D90 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */; };
+		A0D893FBB1D391DF81028C63 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */; };
+		A82DFDE69FA490B5F74409F6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484AA36835C029AFE13B179 /* KeyboardViewController.swift */; };
+		AF245154414F427CF5E97C33 /* IPhoneSenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */; };
+		BFB63E68370CF61F2624089C /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77E68CCD1625627EF64F6E /* SharedConstants.swift */; };
+		D730D4BABDC272697750D31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099737A932BCA2E6383C8466 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF6B5F808161D1DCBFFB935B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1648B50EFF81D419E8A3F95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7A61868697B311B9A2BBDA0;
+			remoteInfo = RemoteKeyboardExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BEA7880CCA12B147C2536C9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				05D6D7601D7CC5D1E50108FE /* RemoteKeyboardExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		099737A932BCA2E6383C8466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RemoteKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinNotificationCenter.swift; sourceTree = "<group>"; };
+		8488C367F669051E8298365F /* IPadReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadReceiverView.swift; sourceTree = "<group>"; };
+		94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RemoteKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
+		BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneSenderView.swift; sourceTree = "<group>"; };
+		C484AA36835C029AFE13B179 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStorage.swift; sourceTree = "<group>"; };
+		DB77E68CCD1625627EF64F6E /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+		E4CFFD06342C2B2B0E7ED867 /* RemoteKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteKeyboardApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		84C0F28652E99C990529C4EB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */,
+				96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */,
+				DB77E68CCD1625627EF64F6E /* SharedConstants.swift */,
+				D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9A657EFA8974C53CCE41692A /* SharedKit */ = {
+			isa = PBXGroup;
+			children = (
+				84C0F28652E99C990529C4EB /* Sources */,
+			);
+			path = SharedKit;
+			sourceTree = "<group>";
+		};
+		A05D11AB405185B75BD8AB89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				099737A932BCA2E6383C8466 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A077394C12FD93DE9B4A2226 /* RemoteKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F6A62676380919D1365867CE /* App */,
+				CE331F05CAF5D8F28F1B8CC0 /* iPad */,
+				FDBA9CC61381A5AABCB1133A /* iPhone */,
+				A05D11AB405185B75BD8AB89 /* Resources */,
+			);
+			path = RemoteKeyboard;
+			sourceTree = "<group>";
+		};
+		A835AC001F26591A81ACA622 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */,
+				1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE331F05CAF5D8F28F1B8CC0 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8488C367F669051E8298365F /* IPadReceiverView.swift */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		D04788DBE6F368C0905AC530 = {
+			isa = PBXGroup;
+			children = (
+				A077394C12FD93DE9B4A2226 /* RemoteKeyboard */,
+				F28EA2D24FD52CAD8D10BDDF /* RemoteKeyboardExtension */,
+				9A657EFA8974C53CCE41692A /* SharedKit */,
+				A835AC001F26591A81ACA622 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F28EA2D24FD52CAD8D10BDDF /* RemoteKeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C484AA36835C029AFE13B179 /* KeyboardViewController.swift */,
+			);
+			path = RemoteKeyboardExtension;
+			sourceTree = "<group>";
+		};
+		F6A62676380919D1365867CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4CFFD06342C2B2B0E7ED867 /* RemoteKeyboardApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDBA9CC61381A5AABCB1133A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59AB0FE1BFD22C6509AC4AEA /* RemoteKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58F30165122F5FD818FC548 /* Build configuration list for PBXNativeTarget "RemoteKeyboard" */;
+			buildPhases = (
+				EC63B7C5D22936019CF0CCA4 /* Sources */,
+				F39767A2F5CBAE262BEEFF71 /* Resources */,
+				4BEA7880CCA12B147C2536C9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF6C1BB92567D39A6D6B379A /* PBXTargetDependency */,
+			);
+			name = RemoteKeyboard;
+			packageProductDependencies = (
+			);
+			productName = RemoteKeyboard;
+			productReference = 94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7A61868697B311B9A2BBDA0 /* RemoteKeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E36C931ED023E77C03A7AF69 /* Build configuration list for PBXNativeTarget "RemoteKeyboardExtension" */;
+			buildPhases = (
+				41C832EE25F8A5F8C78CB23D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteKeyboardExtension;
+			packageProductDependencies = (
+			);
+			productName = RemoteKeyboardExtension;
+			productReference = 1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1648B50EFF81D419E8A3F95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = F9F8F0078524DAE745E7BB67 /* Build configuration list for PBXProject "RemoteKeyboard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D04788DBE6F368C0905AC530;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A835AC001F26591A81ACA622 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59AB0FE1BFD22C6509AC4AEA /* RemoteKeyboard */,
+				F7A61868697B311B9A2BBDA0 /* RemoteKeyboardExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F39767A2F5CBAE262BEEFF71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D730D4BABDC272697750D31C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41C832EE25F8A5F8C78CB23D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0670D791278453A5D093B109 /* DarwinNotificationCenter.swift in Sources */,
+				A82DFDE69FA490B5F74409F6 /* KeyboardViewController.swift in Sources */,
+				11FBB79CB9E2078DDA0027FE /* MultipeerManager.swift in Sources */,
+				33B8DB28608E1384C2F74331 /* SharedConstants.swift in Sources */,
+				2FFC82C9C3582402715BA5F4 /* SharedStorage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC63B7C5D22936019CF0CCA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D893FBB1D391DF81028C63 /* DarwinNotificationCenter.swift in Sources */,
+				31B9E4349DD7A042BB6B7B9D /* IPadReceiverView.swift in Sources */,
+				AF245154414F427CF5E97C33 /* IPhoneSenderView.swift in Sources */,
+				9207883ACF9939496BBF8D90 /* MultipeerManager.swift in Sources */,
+				690D8F5627D3CA0111F63FBE /* RemoteKeyboardApp.swift in Sources */,
+				BFB63E68370CF61F2624089C /* SharedConstants.swift in Sources */,
+				61E06BB5476DD20968F71F09 /* SharedStorage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF6C1BB92567D39A6D6B379A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7A61868697B311B9A2BBDA0 /* RemoteKeyboardExtension */;
+			targetProxy = FF6B5F808161D1DCBFFB935B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		44D3B58FAA65CD46A203C87F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RemoteKeyboardExtension/RemoteKeyboardExtension.entitlements;
+				INFOPLIST_FILE = RemoteKeyboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		521F74A41DF85881DDE0D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RemoteKeyboardExtension/RemoteKeyboardExtension.entitlements;
+				INFOPLIST_FILE = RemoteKeyboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58853BA260DAF9F79D5D1F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemoteKeyboard/RemoteKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RemoteKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6AFA786E0D06FB345A994D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemoteKeyboard/RemoteKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RemoteKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F08A1A96DCEEB8411DAE09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		BDE8DE4DB90F9D523E30A4B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D58F30165122F5FD818FC548 /* Build configuration list for PBXNativeTarget "RemoteKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AFA786E0D06FB345A994D01 /* Debug */,
+				58853BA260DAF9F79D5D1F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E36C931ED023E77C03A7AF69 /* Build configuration list for PBXNativeTarget "RemoteKeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44D3B58FAA65CD46A203C87F /* Debug */,
+				521F74A41DF85881DDE0D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F9F8F0078524DAE745E7BB67 /* Build configuration list for PBXProject "RemoteKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE8DE4DB90F9D523E30A4B4 /* Debug */,
+				8F08A1A96DCEEB8411DAE09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1648B50EFF81D419E8A3F95 /* Project object */;
+}
