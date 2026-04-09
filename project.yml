@@ -48,10 +48,12 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         INFOPLIST_FILE: RemoteKeyboard/Info.plist
         CODE_SIGN_ENTITLEMENTS: RemoteKeyboard/RemoteKeyboard.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
       path: RemoteKeyboard/Info.plist
       properties:
         CFBundleDisplayName: ipad keyboard
+        CFBundleIconName: AppIcon
         NSLocalNetworkUsageDescription: "ipad keyboard는 iPhone과 iPad를 연결하기 위해 로컬 네트워크를 사용합니다."
         NSUserTrackingUsageDescription: "맞춤형 광고 제공을 위해 기기 식별자에 접근합니다. 거부해도 앱 사용에 영향 없습니다."
         GADApplicationIdentifier: ca-app-pub-5484293743122557~8701567421
