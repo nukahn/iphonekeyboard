@@ -1,0 +1,72 @@
+/* IPhoneSenderView */
+"input.placeholder" = "여기에 입력하세요...";
+"key.delete" = "⌫ 삭제";
+"key.enter" = "↵ 엔터";
+"key.cursor.left" = "←";
+"key.cursor.right" = "→";
+"key.cursor.up" = "↑";
+"key.cursor.down" = "↓";
+"key.select.all" = "전체선택";
+"key.copy" = "복사";
+"key.paste" = "붙여넣기";
+"key.retry" = "재연결";
+
+"status.connected" = "%@에 연결됨";
+"status.connecting" = "연결 중...";
+"status.searching.ipad" = "iPad 검색 중...";
+"status.searching.iphone" = "iPhone 검색 중...";
+"status.disconnected" = "연결 안됨";
+
+"hint.open.app" = "iPad에서 ipad keyboard 앱을 실행하면\n자동으로 연결됩니다.";
+
+"nav.title.iphone" = "ipad keyboard";
+
+/* IPadReceiverView */
+"nav.title.ipad" = "ipad keyboard — iPad";
+"btn.clear.log" = "로그 지우기";
+"btn.keyboard.setup" = "키보드 설정 방법 보기";
+"btn.reconnect" = "재연결";
+
+"connection.subtitle.connected" = "iPhone 키보드 입력이 이 iPad로 전달됩니다";
+"connection.subtitle.connecting" = "잠시만 기다려주세요";
+"connection.subtitle.searching" = "iPhone에서 ipad keyboard 앱을 실행하세요";
+"connection.subtitle.disconnected" = "앱을 재시작하거나 잠시 기다려주세요";
+
+"log.insert" = "삽입: \"%@\"";
+"log.delete.one" = "← 삭제";
+"log.delete.n" = "← 삭제 ×%@";
+"log.return" = "↵ 줄바꿈";
+"log.cursor.left" = "← 커서";
+"log.cursor.right" = "→ 커서";
+"log.cursor.up" = "↑ 커서";
+"log.cursor.down" = "↓ 커서";
+"log.select.all" = "전체 선택";
+"log.copy" = "복사";
+"log.paste" = "붙여넣기";
+
+/* OnboardingView */
+"onboarding.title" = "키보드 설정 안내";
+"onboarding.done" = "완료";
+"onboarding.intro" = "iPhone을 iPad 키보드로 사용하려면 아래 단계를 따라 ipad keyboard를 시스템 키보드로 등록하세요.";
+"onboarding.section.steps" = "설정 단계";
+"onboarding.btn.settings" = "설정 앱 열기";
+
+"onboarding.step1.title" = "설정 앱 열기";
+"onboarding.step1.desc" = "iPad에서 설정(Settings) 앱을 엽니다.";
+"onboarding.step2.title" = "키보드 설정으로 이동";
+"onboarding.step2.desc" = "일반 → 키보드 → 키보드 → 새 키보드 추가";
+"onboarding.step3.title" = "ipad keyboard 선택";
+"onboarding.step3.desc" = "목록에서 ipad keyboard를 찾아 탭하세요.";
+"onboarding.step4.title" = "전체 허용 활성화";
+"onboarding.step4.desc" = "ipad keyboard → '전체 허용'을 켜세요.\n(App Group 접근에 필요합니다)";
+"onboarding.step5.title" = "키보드 전환";
+"onboarding.step5.desc" = "어떤 앱에서든 키보드의 지구본(🌐) 버튼을 눌러\nipad keyboard로 전환하세요.";
+
+/* Error */
+"error.title" = "오류";
+"error.connection.title" = "연결 오류";
+"error.btn.confirm" = "확인";
+"error.btn.retry" = "재연결";
+
+/* Mac */
+"mac.unsupported" = "Mac은 지원하지 않습니다.";

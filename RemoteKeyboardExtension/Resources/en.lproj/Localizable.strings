@@ -1,0 +1,3 @@
+/* KeyboardViewController */
+"keyboard.status" = "ipad keyboard\nType from your iPhone";
+"keyboard.error" = "⚠️ %@";

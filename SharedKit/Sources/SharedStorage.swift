@@ -5,8 +5,8 @@ final class SharedStorage {
 
     private let defaults: UserDefaults?
 
-    private init() {
-        defaults = UserDefaults(suiteName: SharedConstants.appGroupID)
+    init(suiteName: String = SharedConstants.appGroupID) {
+        defaults = UserDefaults(suiteName: suiteName)
     }
 
     func save(messageData: Data) {

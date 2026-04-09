@@ -10,20 +10,43 @@
 		05D6D7601D7CC5D1E50108FE /* RemoteKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0670D791278453A5D093B109 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */; };
 		11FBB79CB9E2078DDA0027FE /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */; };
+		24B8299DDF6F75DC164142C4 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8151868C5A101DA84B667FC /* BannerAdView.swift */; };
 		2FFC82C9C3582402715BA5F4 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */; };
 		31B9E4349DD7A042BB6B7B9D /* IPadReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C367F669051E8298365F /* IPadReceiverView.swift */; };
 		33B8DB28608E1384C2F74331 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77E68CCD1625627EF64F6E /* SharedConstants.swift */; };
+		49376B6400B653022BEAFB1F /* SharedConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DCB2B7D0541C5A3352DBEE /* SharedConstantsTests.swift */; };
+		534ACFE55C2AA10350DFB54C /* ConnectionStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1A3C3C23932DA46FD56A5 /* ConnectionStateTests.swift */; };
 		61E06BB5476DD20968F71F09 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */; };
+		645A83CB351271FB0D172CFB /* SharedStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDEE19E7ED0BADFAB5C31E6 /* SharedStorageTests.swift */; };
 		690D8F5627D3CA0111F63FBE /* RemoteKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFFD06342C2B2B0E7ED867 /* RemoteKeyboardApp.swift */; };
+		7E1495B81293F6F03D3B6129 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C44F715A0956B04A20318 /* AdManager.swift */; };
+		803E7677E68DB205E02D7B90 /* StreamingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA64F429094FBB2BF5CEE27 /* StreamingTextView.swift */; };
+		907BBB58D30FD3C0F1B3CFA4 /* MultipeerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ADE2859121D3FF4AF50E9 /* MultipeerManagerTests.swift */; };
 		9207883ACF9939496BBF8D90 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */; };
+		966A23F63C8664116A17DF3F /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B30C68EB2AB268C1CE659731 /* GoogleMobileAds */; };
 		A0D893FBB1D391DF81028C63 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */; };
+		A42486F062D5E52F6276108F /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */; };
+		A6F569285C72F75489C3BC57 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */; };
 		A82DFDE69FA490B5F74409F6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484AA36835C029AFE13B179 /* KeyboardViewController.swift */; };
 		AF245154414F427CF5E97C33 /* IPhoneSenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */; };
+		BACAF23B11678D29009317A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE516DD4FC66BC7ECE988BC9 /* Localizable.strings */; };
 		BFB63E68370CF61F2624089C /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77E68CCD1625627EF64F6E /* SharedConstants.swift */; };
+		C246A7B4211E1D51EA972DFC /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77E68CCD1625627EF64F6E /* SharedConstants.swift */; };
+		CA813A21A01B0A41042619D6 /* MessageProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AEF91E74308CCFC0CC6FF /* MessageProtocolTests.swift */; };
+		CB58E1BC3549706AFC27F406 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4C03737642F8E26EB419E5A /* Localizable.strings */; };
+		CF525F271A80032790AECE1B /* StreamingDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBCF2A90A928F067AB7D7C /* StreamingDeltaTests.swift */; };
 		D730D4BABDC272697750D31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099737A932BCA2E6383C8466 /* Assets.xcassets */; };
+		FD01B0745D4777C4135DB4B4 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A733A16756AF5C8E68B06E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1648B50EFF81D419E8A3F95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59AB0FE1BFD22C6509AC4AEA;
+			remoteInfo = RemoteKeyboard;
+		};
 		FF6B5F808161D1DCBFFB935B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1648B50EFF81D419E8A3F95 /* Project object */;
@@ -50,18 +73,64 @@
 /* Begin PBXFileReference section */
 		099737A932BCA2E6383C8466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RemoteKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA64F429094FBB2BF5CEE27 /* StreamingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingTextView.swift; sourceTree = "<group>"; };
+		5410E90D862D5496B810101B /* RemoteKeyboardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RemoteKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		561DF18FFFE44C2BCD5DA8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6723A4562E1EDE660AA7ADEE /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		74DBCF2A90A928F067AB7D7C /* StreamingDeltaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingDeltaTests.swift; sourceTree = "<group>"; };
+		7AA1A3C3C23932DA46FD56A5 /* ConnectionStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStateTests.swift; sourceTree = "<group>"; };
 		7ABBE36D3ADF1AB326C17A09 /* DarwinNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinNotificationCenter.swift; sourceTree = "<group>"; };
 		8488C367F669051E8298365F /* IPadReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadReceiverView.swift; sourceTree = "<group>"; };
+		8A9AEF91E74308CCFC0CC6FF /* MessageProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProtocolTests.swift; sourceTree = "<group>"; };
 		94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RemoteKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C9DF4F56649031D6FA47B1 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
+		AD48FFD211E71DB9A99C76FD /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneSenderView.swift; sourceTree = "<group>"; };
 		C484AA36835C029AFE13B179 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		C8151868C5A101DA84B667FC /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		D06ADE2859121D3FF4AF50E9 /* MultipeerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManagerTests.swift; sourceTree = "<group>"; };
 		D06F5DD3A1754710DE9AB904 /* SharedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStorage.swift; sourceTree = "<group>"; };
+		D9DCB2B7D0541C5A3352DBEE /* SharedConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstantsTests.swift; sourceTree = "<group>"; };
 		DB77E68CCD1625627EF64F6E /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+		DDDEE19E7ED0BADFAB5C31E6 /* SharedStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStorageTests.swift; sourceTree = "<group>"; };
+		DE6C44F715A0956B04A20318 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		E4CFFD06342C2B2B0E7ED867 /* RemoteKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteKeyboardApp.swift; sourceTree = "<group>"; };
+		F297ADDF7BA3F1BEB18798FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		F86FB931C9A1A7E9651BF50A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966A23F63C8664116A17DF3F /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		1A2BDF5078AEB00063C88CB0 /* RemoteKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AA1A3C3C23932DA46FD56A5 /* ConnectionStateTests.swift */,
+				8A9AEF91E74308CCFC0CC6FF /* MessageProtocolTests.swift */,
+				D06ADE2859121D3FF4AF50E9 /* MultipeerManagerTests.swift */,
+				D9DCB2B7D0541C5A3352DBEE /* SharedConstantsTests.swift */,
+				DDDEE19E7ED0BADFAB5C31E6 /* SharedStorageTests.swift */,
+				74DBCF2A90A928F067AB7D7C /* StreamingDeltaTests.swift */,
+			);
+			path = RemoteKeyboardTests;
+			sourceTree = "<group>";
+		};
+		27616CC16F42F4E1E68B2C04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4C03737642F8E26EB419E5A /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		84C0F28652E99C990529C4EB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +150,20 @@
 			path = SharedKit;
 			sourceTree = "<group>";
 		};
+		9EEC2946AF6734A8FABC0CCE /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				DE6C44F715A0956B04A20318 /* AdManager.swift */,
+				C8151868C5A101DA84B667FC /* BannerAdView.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 		A05D11AB405185B75BD8AB89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				099737A932BCA2E6383C8466 /* Assets.xcassets */,
+				AE516DD4FC66BC7ECE988BC9 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -92,6 +171,7 @@
 		A077394C12FD93DE9B4A2226 /* RemoteKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9EEC2946AF6734A8FABC0CCE /* Ads */,
 				F6A62676380919D1365867CE /* App */,
 				CE331F05CAF5D8F28F1B8CC0 /* iPad */,
 				FDBA9CC61381A5AABCB1133A /* iPhone */,
@@ -105,6 +185,7 @@
 			children = (
 				94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */,
 				1DC62C9A5DA978E528EE1F2C /* RemoteKeyboardExtension.appex */,
+				5410E90D862D5496B810101B /* RemoteKeyboardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +203,7 @@
 			children = (
 				A077394C12FD93DE9B4A2226 /* RemoteKeyboard */,
 				F28EA2D24FD52CAD8D10BDDF /* RemoteKeyboardExtension */,
+				1A2BDF5078AEB00063C88CB0 /* RemoteKeyboardTests */,
 				9A657EFA8974C53CCE41692A /* SharedKit */,
 				A835AC001F26591A81ACA622 /* Products */,
 			);
@@ -131,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				C484AA36835C029AFE13B179 /* KeyboardViewController.swift */,
+				27616CC16F42F4E1E68B2C04 /* Resources */,
 			);
 			path = RemoteKeyboardExtension;
 			sourceTree = "<group>";
@@ -147,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				BE20B77CBB6C79F52A972C07 /* IPhoneSenderView.swift */,
+				3DA64F429094FBB2BF5CEE27 /* StreamingTextView.swift */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -154,12 +238,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		454373DD91E090C163C69FE6 /* RemoteKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC7AA5CD6CB2D49C09EB111 /* Build configuration list for PBXNativeTarget "RemoteKeyboardTests" */;
+			buildPhases = (
+				C6BB5116A0C1B7B6B45381D8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				007A5DAFCF39392080CF3C8B /* PBXTargetDependency */,
+			);
+			name = RemoteKeyboardTests;
+			packageProductDependencies = (
+			);
+			productName = RemoteKeyboardTests;
+			productReference = 5410E90D862D5496B810101B /* RemoteKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		59AB0FE1BFD22C6509AC4AEA /* RemoteKeyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58F30165122F5FD818FC548 /* Build configuration list for PBXNativeTarget "RemoteKeyboard" */;
 			buildPhases = (
 				EC63B7C5D22936019CF0CCA4 /* Sources */,
 				F39767A2F5CBAE262BEEFF71 /* Resources */,
+				F86FB931C9A1A7E9651BF50A /* Frameworks */,
 				4BEA7880CCA12B147C2536C9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -169,6 +272,7 @@
 			);
 			name = RemoteKeyboard;
 			packageProductDependencies = (
+				B30C68EB2AB268C1CE659731 /* GoogleMobileAds */,
 			);
 			productName = RemoteKeyboard;
 			productReference = 94AF4D088AE8FDD23C9A408C /* RemoteKeyboard.app */;
@@ -179,6 +283,7 @@
 			buildConfigurationList = E36C931ED023E77C03A7AF69 /* Build configuration list for PBXNativeTarget "RemoteKeyboardExtension" */;
 			buildPhases = (
 				41C832EE25F8A5F8C78CB23D /* Sources */,
+				19B6A676ABB1D5431E31A806 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -203,14 +308,18 @@
 				};
 			};
 			buildConfigurationList = F9F8F0078524DAE745E7BB67 /* Build configuration list for PBXProject "RemoteKeyboard" */;
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
+				ko,
 			);
 			mainGroup = D04788DBE6F368C0905AC530;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E24AE2379AB9C34DC6AE62A7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A835AC001F26591A81ACA622 /* Products */;
 			projectDirPath = "";
@@ -218,16 +327,26 @@
 			targets = (
 				59AB0FE1BFD22C6509AC4AEA /* RemoteKeyboard */,
 				F7A61868697B311B9A2BBDA0 /* RemoteKeyboardExtension */,
+				454373DD91E090C163C69FE6 /* RemoteKeyboardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		19B6A676ABB1D5431E31A806 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB58E1BC3549706AFC27F406 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F39767A2F5CBAE262BEEFF71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D730D4BABDC272697750D31C /* Assets.xcassets in Resources */,
+				BACAF23B11678D29009317A7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +365,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6BB5116A0C1B7B6B45381D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534ACFE55C2AA10350DFB54C /* ConnectionStateTests.swift in Sources */,
+				A6F569285C72F75489C3BC57 /* DarwinNotificationCenter.swift in Sources */,
+				CA813A21A01B0A41042619D6 /* MessageProtocolTests.swift in Sources */,
+				A42486F062D5E52F6276108F /* MultipeerManager.swift in Sources */,
+				907BBB58D30FD3C0F1B3CFA4 /* MultipeerManagerTests.swift in Sources */,
+				C246A7B4211E1D51EA972DFC /* SharedConstants.swift in Sources */,
+				49376B6400B653022BEAFB1F /* SharedConstantsTests.swift in Sources */,
+				FD01B0745D4777C4135DB4B4 /* SharedStorage.swift in Sources */,
+				645A83CB351271FB0D172CFB /* SharedStorageTests.swift in Sources */,
+				CF525F271A80032790AECE1B /* StreamingDeltaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC63B7C5D22936019CF0CCA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1495B81293F6F03D3B6129 /* AdManager.swift in Sources */,
+				24B8299DDF6F75DC164142C4 /* BannerAdView.swift in Sources */,
 				A0D893FBB1D391DF81028C63 /* DarwinNotificationCenter.swift in Sources */,
 				31B9E4349DD7A042BB6B7B9D /* IPadReceiverView.swift in Sources */,
 				AF245154414F427CF5E97C33 /* IPhoneSenderView.swift in Sources */,
@@ -257,18 +395,45 @@
 				690D8F5627D3CA0111F63FBE /* RemoteKeyboardApp.swift in Sources */,
 				BFB63E68370CF61F2624089C /* SharedConstants.swift in Sources */,
 				61E06BB5476DD20968F71F09 /* SharedStorage.swift in Sources */,
+				803E7677E68DB205E02D7B90 /* StreamingTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		007A5DAFCF39392080CF3C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59AB0FE1BFD22C6509AC4AEA /* RemoteKeyboard */;
+			targetProxy = A733A16756AF5C8E68B06E97 /* PBXContainerItemProxy */;
+		};
 		FF6C1BB92567D39A6D6B379A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F7A61868697B311B9A2BBDA0 /* RemoteKeyboardExtension */;
 			targetProxy = FF6B5F808161D1DCBFFB935B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE516DD4FC66BC7ECE988BC9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F297ADDF7BA3F1BEB18798FC /* en */,
+				AD48FFD211E71DB9A99C76FD /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C4C03737642F8E26EB419E5A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				561DF18FFFE44C2BCD5DA8DB /* en */,
+				6723A4562E1EDE660AA7ADEE /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		44D3B58FAA65CD46A203C87F /* Debug */ = {
@@ -399,6 +564,24 @@
 			};
 			name = Release;
 		};
+		A06B8A0F0CD1A0033947BE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteKeyboard.app/RemoteKeyboard";
+			};
+			name = Release;
+		};
 		BDE8DE4DB90F9D523E30A4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -464,9 +647,36 @@
 			};
 			name = Debug;
 		};
+		CC7618CAA29BE0EF39B12150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.remotekeyboard.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteKeyboard.app/RemoteKeyboard";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6CC7AA5CD6CB2D49C09EB111 /* Build configuration list for PBXNativeTarget "RemoteKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7618CAA29BE0EF39B12150 /* Debug */,
+				A06B8A0F0CD1A0033947BE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		D58F30165122F5FD818FC548 /* Build configuration list for PBXNativeTarget "RemoteKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -495,6 +705,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E24AE2379AB9C34DC6AE62A7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B30C68EB2AB268C1CE659731 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E24AE2379AB9C34DC6AE62A7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1648B50EFF81D419E8A3F95 /* Project object */;
 }

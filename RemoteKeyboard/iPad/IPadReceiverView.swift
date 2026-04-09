@@ -8,6 +8,10 @@ struct IPadReceiverView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
+                // 배너 광고
+                BannerAdView(adUnitID: AdManager.shared.bannerAdUnitID)
+                    .frame(height: 50)
+
                 // 연결 상태 헤더
                 connectionHeader
                     .padding()
@@ -36,19 +40,38 @@ struct IPadReceiverView: View {
 
                 Divider()
 
-                // 키보드 설정 안내 버튼
-                Button {
-                    showOnboarding = true
-                } label: {
-                    Label("키보드 설정 방법 보기", systemImage: "keyboard")
+                HStack(spacing: 16) {
+                    Button {
+                        showOnboarding = true
+                    } label: {
+                        Label(String(localized: "btn.keyboard.setup"), systemImage: "keyboard")
+                    }
+
+                    if case .disconnected = mc.connectionState {
+                        Button {
+                            mc.retry()
+                        } label: {
+                            Label(String(localized: "btn.reconnect"), systemImage: "arrow.clockwise")
+                        }
+                        .tint(.orange)
+                    }
                 }
                 .padding()
             }
-            .navigationTitle("RemoteKeyboard — iPad")
+            .navigationTitle(String(localized: "nav.title.ipad"))
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Button("로그 지우기") { receivedLog.removeAll() })
+            .navigationBarItems(trailing: Button(String(localized: "btn.clear.log")) { receivedLog.removeAll() })
             .sheet(isPresented: $showOnboarding) {
                 OnboardingView()
+            }
+            .alert(String(localized: "error.connection.title"), isPresented: Binding(
+                get: { mc.errorMessage != nil },
+                set: { if !$0 { mc.clearError() } }
+            )) {
+                Button(String(localized: "error.btn.confirm")) { mc.clearError() }
+                Button(String(localized: "error.btn.retry")) { mc.retry() }
+            } message: {
+                Text(mc.errorMessage ?? "")
             }
         }
         .onAppear {
@@ -62,11 +85,8 @@ struct IPadReceiverView: View {
 
     private func setupDataReceiver() {
         mc.onDataReceived = { data in
-            // 1. App Group에 저장
             SharedStorage.shared.save(messageData: data)
-            // 2. 키보드 익스텐션에 Darwin 알림 발송
             DarwinNotificationCenter.shared.post(SharedConstants.darwinNotificationName)
-            // 3. 수신 로그 업데이트 (디버깅용)
             DispatchQueue.main.async {
                 if let text = parseLogMessage(data) {
                     receivedLog.append(text)
@@ -81,14 +101,28 @@ struct IPadReceiverView: View {
         switch MessageType(rawValue: prefix) {
         case .insertText:
             let text = String(data: data.dropFirst(), encoding: .utf8) ?? "?"
-            return "삽입: \"\(text)\""
+            return String(format: String(localized: "log.insert"), text)
         case .deleteOne:
-            return "← 삭제"
+            return String(localized: "log.delete.one")
         case .deleteN:
             let n = String(data: data.dropFirst(), encoding: .utf8) ?? "?"
-            return "← 삭제 ×\(n)"
+            return String(format: String(localized: "log.delete.n"), n)
         case .returnKey:
-            return "↵ 줄바꿈"
+            return String(localized: "log.return")
+        case .cursorLeft:
+            return String(localized: "log.cursor.left")
+        case .cursorRight:
+            return String(localized: "log.cursor.right")
+        case .cursorUp:
+            return String(localized: "log.cursor.up")
+        case .cursorDown:
+            return String(localized: "log.cursor.down")
+        case .selectAll:
+            return String(localized: "log.select.all")
+        case .copy:
+            return String(localized: "log.copy")
+        case .paste:
+            return String(localized: "log.paste")
         case nil:
             return nil
         }
@@ -122,19 +156,19 @@ struct IPadReceiverView: View {
 
     private var headerTitle: String {
         switch mc.connectionState {
-        case .connected(let name): return "\(name) 연결됨"
-        case .connecting: return "연결 중..."
-        case .searching: return "iPhone 검색 중..."
-        case .disconnected: return "연결 안됨"
+        case .connected(let name): return String(format: String(localized: "status.connected"), name)
+        case .connecting: return String(localized: "status.connecting")
+        case .searching: return String(localized: "status.searching.iphone")
+        case .disconnected: return String(localized: "status.disconnected")
         }
     }
 
     private var headerSubtitle: String {
         switch mc.connectionState {
-        case .connected: return "iPhone 키보드 입력이 이 iPad로 전달됩니다"
-        case .connecting: return "잠시만 기다려주세요"
-        case .searching: return "iPhone에서 RemoteKeyboard 앱을 실행하세요"
-        case .disconnected: return "앱을 재시작하거나 잠시 기다려주세요"
+        case .connected: return String(localized: "connection.subtitle.connected")
+        case .connecting: return String(localized: "connection.subtitle.connecting")
+        case .searching: return String(localized: "connection.subtitle.searching")
+        case .disconnected: return String(localized: "connection.subtitle.disconnected")
         }
     }
 }
@@ -144,23 +178,25 @@ struct IPadReceiverView: View {
 struct OnboardingView: View {
     @Environment(\.dismiss) private var dismiss
 
-    private let steps = [
-        ("1", "설정 앱 열기", "iPad에서 설정(Settings) 앱을 엽니다."),
-        ("2", "키보드 설정으로 이동", "일반 → 키보드 → 키보드 → 새 키보드 추가"),
-        ("3", "RemoteKeyboard 선택", "목록에서 RemoteKeyboard를 찾아 탭하세요."),
-        ("4", "전체 허용 활성화", "RemoteKeyboard → '전체 허용'을 켜세요.\n(App Group 접근에 필요합니다)"),
-        ("5", "키보드 전환", "어떤 앱에서든 키보드의 지구본(🌐) 버튼을 눌러\nRemoteKeyboard로 전환하세요."),
-    ]
+    private var steps: [(String, String, String)] {
+        [
+            ("1", String(localized: "onboarding.step1.title"), String(localized: "onboarding.step1.desc")),
+            ("2", String(localized: "onboarding.step2.title"), String(localized: "onboarding.step2.desc")),
+            ("3", String(localized: "onboarding.step3.title"), String(localized: "onboarding.step3.desc")),
+            ("4", String(localized: "onboarding.step4.title"), String(localized: "onboarding.step4.desc")),
+            ("5", String(localized: "onboarding.step5.title"), String(localized: "onboarding.step5.desc")),
+        ]
+    }
 
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    Text("iPhone을 iPad 키보드로 사용하려면 아래 단계를 따라 RemoteKeyboard를 시스템 키보드로 등록하세요.")
+                    Text(String(localized: "onboarding.intro"))
                         .padding(.vertical, 4)
                 }
 
-                Section("설정 단계") {
+                Section(String(localized: "onboarding.section.steps")) {
                     ForEach(steps, id: \.0) { step in
                         HStack(alignment: .top, spacing: 12) {
                             Text(step.0)
@@ -183,15 +219,15 @@ struct OnboardingView: View {
                             UIApplication.shared.open(url)
                         }
                     } label: {
-                        Label("설정 앱 열기", systemImage: "gear")
+                        Label(String(localized: "onboarding.btn.settings"), systemImage: "gear")
                     }
                 }
             }
-            .navigationTitle("키보드 설정 안내")
+            .navigationTitle(String(localized: "onboarding.title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("완료") { dismiss() }
+                    Button(String(localized: "onboarding.done")) { dismiss() }
                 }
             }
         }

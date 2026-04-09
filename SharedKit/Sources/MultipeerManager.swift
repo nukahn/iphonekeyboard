@@ -20,6 +20,7 @@ final class MultipeerManager: NSObject, ObservableObject {
 
     @Published var connectionState: ConnectionState = .disconnected
     @Published var connectedPeers: [MCPeerID] = []
+    @Published var errorMessage: String?
 
     // Called on the receiver (iPad) when a message arrives
     var onDataReceived: ((Data) -> Void)?
@@ -31,7 +32,9 @@ final class MultipeerManager: NSObject, ObservableObject {
     private var browser: MCNearbyServiceBrowser?
 
     private var reconnectTimer: Timer?
-    private var reconnectDelay: TimeInterval = 1.0
+    private(set) var reconnectDelay: TimeInterval = 1.0
+    static let maxReconnectDelay: TimeInterval = 30.0
+    static let initialReconnectDelay: TimeInterval = 1.0
 
     init(role: MCRole, displayName: String = UIDevice.current.name) {
         self.role = role
@@ -77,11 +80,18 @@ final class MultipeerManager: NSObject, ObservableObject {
 
     // MARK: - Send
 
-    func send(type: MessageType, payload: Data = Data()) {
-        guard !session.connectedPeers.isEmpty else { return }
+    @discardableResult
+    func send(type: MessageType, payload: Data = Data()) -> Bool {
+        guard !session.connectedPeers.isEmpty else { return false }
         var message = Data([type.rawValue])
         message.append(payload)
-        try? session.send(message, toPeers: session.connectedPeers, with: .reliable)
+        do {
+            try session.send(message, toPeers: session.connectedPeers, with: .reliable)
+            return true
+        } catch {
+            DispatchQueue.main.async { self.errorMessage = "전송 실패: \(error.localizedDescription)" }
+            return false
+        }
     }
 
     func sendText(_ text: String) {
@@ -89,8 +99,34 @@ final class MultipeerManager: NSObject, ObservableObject {
         send(type: .insertText, payload: data)
     }
 
-    func sendDeleteBackward() { send(type: .deleteOne) }
-    func sendReturn()         { send(type: .returnKey) }
+    func sendDeleteBackward(count: Int = 1) {
+        if count == 1 {
+            send(type: .deleteOne)
+        } else {
+            guard let data = "\(count)".data(using: .utf8) else { return }
+            send(type: .deleteN, payload: data)
+        }
+    }
+
+    func sendReturn() { send(type: .returnKey) }
+
+    func sendCursorLeft()  { send(type: .cursorLeft) }
+    func sendCursorRight() { send(type: .cursorRight) }
+    func sendCursorUp()    { send(type: .cursorUp) }
+    func sendCursorDown()  { send(type: .cursorDown) }
+    func sendSelectAll()   { send(type: .selectAll) }
+    func sendCopy()        { send(type: .copy) }
+    func sendPaste()       { send(type: .paste) }
+
+    func retry() {
+        stop()
+        reconnectDelay = MultipeerManager.initialReconnectDelay
+        start()
+    }
+
+    func clearError() {
+        errorMessage = nil
+    }
 
     // MARK: - Reconnect
 
@@ -99,7 +135,7 @@ final class MultipeerManager: NSObject, ObservableObject {
         reconnectTimer = Timer.scheduledTimer(withTimeInterval: reconnectDelay, repeats: false) { [weak self] _ in
             self?.start()
         }
-        reconnectDelay = min(reconnectDelay * 2, 30.0)
+        reconnectDelay = min(reconnectDelay * 2, MultipeerManager.maxReconnectDelay)
     }
 
     private func cancelReconnect() {
@@ -116,7 +152,7 @@ extension MultipeerManager: MCSessionDelegate {
         DispatchQueue.main.async {
             switch state {
             case .connected:
-                self.reconnectDelay = 1.0
+                self.reconnectDelay = MultipeerManager.initialReconnectDelay
                 self.cancelReconnect()
                 self.connectedPeers = session.connectedPeers
                 self.connectionState = .connected(peerName: peerID.displayName)
@@ -153,7 +189,10 @@ extension MultipeerManager: MCNearbyServiceAdvertiserDelegate {
     }
 
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        DispatchQueue.main.async { self.connectionState = .disconnected }
+        DispatchQueue.main.async {
+            self.connectionState = .disconnected
+            self.errorMessage = "광고 시작 실패: \(error.localizedDescription)"
+        }
     }
 }
 
@@ -169,6 +208,9 @@ extension MultipeerManager: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {}
 
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-        DispatchQueue.main.async { self.connectionState = .disconnected }
+        DispatchQueue.main.async {
+            self.connectionState = .disconnected
+            self.errorMessage = "검색 시작 실패: \(error.localizedDescription)"
+        }
     }
 }

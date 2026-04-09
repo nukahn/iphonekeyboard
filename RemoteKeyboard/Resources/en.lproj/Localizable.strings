@@ -1,0 +1,72 @@
+/* IPhoneSenderView */
+"input.placeholder" = "Type here...";
+"key.delete" = "⌫ Delete";
+"key.enter" = "↵ Enter";
+"key.cursor.left" = "←";
+"key.cursor.right" = "→";
+"key.cursor.up" = "↑";
+"key.cursor.down" = "↓";
+"key.select.all" = "Select All";
+"key.copy" = "Copy";
+"key.paste" = "Paste";
+"key.retry" = "Reconnect";
+
+"status.connected" = "Connected to %@";
+"status.connecting" = "Connecting...";
+"status.searching.ipad" = "Searching for iPad...";
+"status.searching.iphone" = "Searching for iPhone...";
+"status.disconnected" = "Not Connected";
+
+"hint.open.app" = "Open ipad keyboard on your iPad\nto connect automatically.";
+
+"nav.title.iphone" = "ipad keyboard";
+
+/* IPadReceiverView */
+"nav.title.ipad" = "ipad keyboard — iPad";
+"btn.clear.log" = "Clear Log";
+"btn.keyboard.setup" = "Keyboard Setup Guide";
+"btn.reconnect" = "Reconnect";
+
+"connection.subtitle.connected" = "iPhone keyboard input is being relayed to this iPad";
+"connection.subtitle.connecting" = "Please wait...";
+"connection.subtitle.searching" = "Open ipad keyboard on your iPhone";
+"connection.subtitle.disconnected" = "Restart the app or wait a moment";
+
+"log.insert" = "Insert: \"%@\"";
+"log.delete.one" = "← Delete";
+"log.delete.n" = "← Delete ×%@";
+"log.return" = "↵ Return";
+"log.cursor.left" = "← Cursor";
+"log.cursor.right" = "→ Cursor";
+"log.cursor.up" = "↑ Cursor";
+"log.cursor.down" = "↓ Cursor";
+"log.select.all" = "Select All";
+"log.copy" = "Copy";
+"log.paste" = "Paste";
+
+/* OnboardingView */
+"onboarding.title" = "Keyboard Setup Guide";
+"onboarding.done" = "Done";
+"onboarding.intro" = "To use your iPhone as an iPad keyboard, follow the steps below to register ipad keyboard as a system keyboard.";
+"onboarding.section.steps" = "Setup Steps";
+"onboarding.btn.settings" = "Open Settings";
+
+"onboarding.step1.title" = "Open Settings";
+"onboarding.step1.desc" = "Open the Settings app on your iPad.";
+"onboarding.step2.title" = "Go to Keyboard Settings";
+"onboarding.step2.desc" = "General → Keyboard → Keyboards → Add New Keyboard";
+"onboarding.step3.title" = "Select ipad keyboard";
+"onboarding.step3.desc" = "Find ipad keyboard in the list and tap it.";
+"onboarding.step4.title" = "Enable Full Access";
+"onboarding.step4.desc" = "ipad keyboard → Turn on 'Allow Full Access'.\n(Required for App Group access)";
+"onboarding.step5.title" = "Switch Keyboard";
+"onboarding.step5.desc" = "In any app, tap the globe (🌐) button on the keyboard\nto switch to ipad keyboard.";
+
+/* Error */
+"error.title" = "Error";
+"error.connection.title" = "Connection Error";
+"error.btn.confirm" = "OK";
+"error.btn.retry" = "Reconnect";
+
+/* Mac */
+"mac.unsupported" = "Mac is not supported.";

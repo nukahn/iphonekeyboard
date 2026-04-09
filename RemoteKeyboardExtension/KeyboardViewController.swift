@@ -71,8 +71,14 @@ class KeyboardViewController: UIInputViewController {
         ])
     }
 
-    private func updateStatusLabel() {
-        statusLabel.text = "RemoteKeyboard\niPhone에서 입력하세요"
+    private func updateStatusLabel(error: String? = nil) {
+        if let error = error {
+            statusLabel.text = String(format: NSLocalizedString("keyboard.error", bundle: Bundle.main, comment: ""), error)
+            statusLabel.textColor = .systemOrange
+        } else {
+            statusLabel.text = NSLocalizedString("keyboard.status", bundle: Bundle.main, comment: "")
+            statusLabel.textColor = .secondaryLabel
+        }
     }
 
     // MARK: - Darwin 알림 (기본, 저지연)
@@ -120,6 +126,33 @@ class KeyboardViewController: UIInputViewController {
             for _ in 0..<count { textDocumentProxy.deleteBackward() }
         case .returnKey:
             textDocumentProxy.insertText("\n")
+        case .cursorLeft:
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: -1)
+        case .cursorRight:
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: 1)
+        case .cursorUp:
+            // textDocumentProxy는 줄 단위 이동 API가 없으므로 줄 길이 추정으로 근사
+            let before = textDocumentProxy.documentContextBeforeInput ?? ""
+            let lineLength = before.reversed().prefix(while: { $0 != "\n" }).count
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: -(lineLength + 1))
+        case .cursorDown:
+            let after = textDocumentProxy.documentContextAfterInput ?? ""
+            let lineLength = after.prefix(while: { $0 != "\n" }).count
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: lineLength + 1)
+        case .selectAll:
+            // textDocumentProxy는 선택 API 미지원 → 전체 텍스트를 클립보드로 복사
+            let before = textDocumentProxy.documentContextBeforeInput ?? ""
+            let after = textDocumentProxy.documentContextAfterInput ?? ""
+            UIPasteboard.general.string = before + after
+        case .copy:
+            // 커서 주변 컨텍스트 복사 (선택 영역 API 없음)
+            let before = textDocumentProxy.documentContextBeforeInput ?? ""
+            let after = textDocumentProxy.documentContextAfterInput ?? ""
+            UIPasteboard.general.string = before + after
+        case .paste:
+            if let text = UIPasteboard.general.string {
+                textDocumentProxy.insertText(text)
+            }
         case nil:
             break
         }
